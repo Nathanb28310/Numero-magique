@@ -7,6 +7,7 @@ int main()
     srand(time(NULL));
     int random_number = rand() % 100 + 1;
     int nb_user;
+    int nb_essai = 10;
     printf("Choisissez un nombre entre 1 et 100 :\n");
     scanf("%d", &nb_user);
     while (nb_user < 1 || nb_user > 100)
@@ -14,7 +15,7 @@ int main()
         printf("Saisie incorrecte\nVeuillez rentrer une valeur correcte !\n");
         scanf("%d", &nb_user);
     }
-    while (nb_user != random_number){
+    while (nb_user != random_number && nb_essai > 1){
         if (nb_user < random_number){
             printf("C'est plus !\n");
         }
@@ -22,6 +23,8 @@ int main()
         {
             printf("C'est moins !\n");
         }
+        nb_essai -= 1;
+        printf("Plus que %d essai(s): \n", nb_essai);
         printf("Choisissez un nombre entre 1 et 100 :\n");
         scanf("%d", &nb_user);
     }
@@ -29,6 +32,11 @@ int main()
     {                            
         printf("Gagné !\n");
     }
+    else
+    {
+        printf("Perdu !\n");
+    }
+    
 
     exit(0);
 }
