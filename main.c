@@ -9,6 +9,11 @@ int main()
     int nb_user;
     printf("Choisissez un nombre entre 1 et 100 :\n");
     scanf("%d", &nb_user);
+    while (nb_user < 1 || nb_user > 100)
+    {   
+        printf("Saisie incorrecte\nVeuillez rentrer une valeur correcte !\n");
+        scanf("%d", &nb_user);
+    }
     while (nb_user != random_number){
         if (nb_user < random_number){
             printf("C'est plus !\n");
@@ -21,7 +26,7 @@ int main()
         scanf("%d", &nb_user);
     }
     if (nb_user == random_number)
-    {
+    {                            
         printf("Gagné !\n");
     }
 
