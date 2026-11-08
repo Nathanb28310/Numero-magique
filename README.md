@@ -13,3 +13,4 @@ Bonus que j'ai rajouté :
 
 - Vérifier si l'utilisateur rentre bien un numéro entre 1 et 100 (et redemande une saisie si besoin).
 - Rajouter un nombre limité de 10 tentatives.
+- Donne un indice après 5 essais : si le numéro est pair ou impair.

@@ -23,7 +23,22 @@ int main()
         {
             printf("C'est moins !\n");
         }
+
         nb_essai -= 1;
+
+        if (nb_essai == 5)
+        {
+            printf("INDICE : le nombre mystère est ");
+            if (random_number%2 == 0)
+            {
+                printf("pair\n");
+            }
+            else
+            {
+                printf("impair\n");
+            }
+            
+        }
         printf("Plus que %d essai(s): \n", nb_essai);
         printf("Choisissez un nombre entre 1 et 100 :\n");
         scanf("%d", &nb_user);
@@ -34,7 +49,7 @@ int main()
     }
     else
     {
-        printf("Perdu !\n");
+        printf("Perdu ! le numéro était : %d\n", random_number);
     }
     
 
